@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --brand-color: #5C92EA;
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --card-bg: #f8fafc;
+  --btn-text-color: #ffffff;
+  --font-family-body: 'Inter', sans-serif;
+  --font-family-heading: 'Outfit', sans-serif;
+}
+
+[data-theme='dark'] {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --card-bg: #1e293b;
+  --brand-color: #818cf8;
+  --btn-text-color: #ffffff;
+}
+
+[data-theme='warm'] {
+  --bg-color: #fefcf5;
+  --text-color: #4a3c31;
+  --card-bg: #fdf5e6;
+  --brand-color: #8A9A5B;
+  --btn-text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family-body);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  letter-spacing: -0.025em;
+}
+
+/* Generic button style tied to theme */
+button, .btn-primary {
+  background-color: var(--brand-color);
+  color: var(--btn-text-color);
+}
+
